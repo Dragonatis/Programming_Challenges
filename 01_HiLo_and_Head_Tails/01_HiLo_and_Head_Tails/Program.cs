@@ -116,6 +116,7 @@ namespace _01_HiLo_and_Head_Tails
                 Console.WriteLine("1 - Higher/Lower");
                 Console.WriteLine("2 - Head/Tails");
                 Console.Write("OPTION: ");
+
                 int wybor = Console.Read();
                 if (wybor == 49)
                     HiLo();
