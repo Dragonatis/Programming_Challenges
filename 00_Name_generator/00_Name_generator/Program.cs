@@ -10,6 +10,7 @@ namespace _00_Name_generator
     {
         static void Main(string[] args)
         {
+            // Zmiana
         }
     }
 }
