@@ -54,7 +54,6 @@ namespace _08_Hangman
                 censoredWord += "_ ";
             Word.Text = censoredWord;
             Word.Background = Brushes.White;
-            Solution.Text = word;
             foreach (Button b in KeyboardGrid.Children)
                 b.IsEnabled = true;
             foreach (Image i in HangmanGrid.Children)
