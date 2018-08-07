@@ -108,6 +108,17 @@ namespace _08_Hangman
                 }
             }
         }
-
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key >= Key.A && e.Key <= Key.Z)
+            {
+                foreach (Button b in KeyboardGrid.Children)
+                    if (((string)(b.Content))[0] == e.Key.ToString().ToCharArray()[0])
+                    {
+                        Button_Click(b, e);
+                        break;
+                    }
+            }
+        }
     }
 }

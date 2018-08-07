@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_08_Hangman"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        KeyDown="OnKeyDownHandler">
     <Grid>
         <Grid Name="HangmanGrid">
             <Image Name="Hangman1" Source="Images/hangman1.png"   Opacity="0" HorizontalAlignment="Left" Height="313" Margin="469,10,0,0" VerticalAlignment="Top" Width="313"/>
@@ -19,13 +20,6 @@
             <Image Name="Hangman9" Source="Images/hangman9.png"   Opacity="0" HorizontalAlignment="Left" Height="313" Margin="469,10,0,0" VerticalAlignment="Top" Width="313"/>
             <Image Name="Hangman10" Source="Images/hangman10.png" Opacity="0" HorizontalAlignment="Left" Height="313" Margin="469,10,0,0" VerticalAlignment="Top" Width="313"/>
         </Grid>
-        <!--RichTextBox Name="Word" HorizontalAlignment="Left" Height="82" Margin="10,328,0,0" VerticalAlignment="Top" Width="570" IsEnabled="False">
-            <FlowDocument>
-                <Paragraph>
-                    <Run FontSize="50" Text=""/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox-->
         <TextBox Name="Word" FontSize="50" Text="Text" IsReadOnly="True" Foreground="Gray" HorizontalAlignment="Left" Height="82" Margin="10,328,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="570"/>
         <Button Name="NewWordButton" FontSize="20" Content="New&#x0a;word" HorizontalAlignment="Left" Margin="652,328,0,0" VerticalAlignment="Top" Width="82" Click="NewWordButton_Click" RenderTransformOrigin="-0.893,-0.455" Height="82"/>
         <Grid Name="KeyboardGrid" HorizontalAlignment="Left" Height="170" Margin="10,94,0,0" VerticalAlignment="Top" Width="454">
