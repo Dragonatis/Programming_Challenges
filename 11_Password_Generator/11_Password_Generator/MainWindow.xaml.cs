@@ -80,7 +80,7 @@ namespace _11_Password_Generator
             }
             else if (score <= 27)                   // 24 - 27
             {
-                Strengh.Foreground = Brushes.LightGreen;
+                Strengh.Foreground = Brushes.Green;
                 StrengText.Text = "Very strong";
             }
             else                                    // 28 - 30
@@ -122,6 +122,9 @@ namespace _11_Password_Generator
             score += digitAmount * 3;
             score += lowerAmount * 1;
             score += upperAmount * 2;
+
+            if (score > 16 && (digitAmount == 0 || lowerAmount == 0 || upperAmount == 0))
+                score = 16;
 
             return score;
         }
