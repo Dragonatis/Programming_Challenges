@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _03_TempConverter
+namespace _02_Temperature_Converter
 {
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
@@ -31,7 +31,7 @@ namespace _03_TempConverter
             PrepareOptions();
             ComboBoxInit();
         }
-        
+
         private void PrepareOptions()
         {
             options.Add("Celcius Degree");
@@ -56,7 +56,8 @@ namespace _03_TempConverter
             if (Box1.Text == "" || Box1.Text == "-" || double.TryParse(Box1.Text, out double value))
             {
                 Box1PreChange = Box1.Text;
-            } else
+            }
+            else
             {
                 int foundPosition = FindPositionOfIllegalCharacter(Box1.Text);
                 Box1.Text = Box1PreChange;
@@ -65,14 +66,14 @@ namespace _03_TempConverter
             if (double.TryParse(Box1.Text, out value))
             {
                 ConvertInput();
-                ConvertOutput();       
+                ConvertOutput();
             }
             SetOutputTextBox();
         }
         private int FindPositionOfIllegalCharacter(string text)
         {
             char[] textAsChar = text.ToCharArray();
-            for (int i=0;i<text.Length;i++)
+            for (int i = 0; i < text.Length; i++)
                 if (textAsChar[i] != '-' && textAsChar[i] != ',' && (textAsChar[i] < 48 || textAsChar[i] > 57))
                     return i;
             return text.Length;

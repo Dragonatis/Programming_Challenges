@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _03_TempConverter.Properties
+namespace _02_Temperature_Converter.Properties
 {
 
 

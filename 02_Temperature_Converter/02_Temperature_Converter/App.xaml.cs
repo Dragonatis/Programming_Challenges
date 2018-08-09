@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace _03_TempConverter
+namespace _02_Temperature_Converter
 {
     /// <summary>
     /// Logika interakcji dla klasy App.xaml
